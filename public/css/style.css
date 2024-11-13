@@ -8,26 +8,26 @@
 }
 @font-face {
     font-family: Cirka-Bold;
-    src: url(assets/Cirka-Bold.woff);
+    src: url(css/Cirka-Bold.woff);
 }
 @font-face {
     font-family: 19;
-    src: url(assets/19-font.woff);
+    src: url(css/19-font.woff);
 }
 @font-face {
     font-family: Contractica-Black;
-    src: url(assets/TBCContractica-Black.woff);
+    src: url(/css/font/TBCContractica-Black.woff);
 }
 @font-face {
     font-family: Contractica-Bold;
-    src: url(assets/TBCContractica-Bold.woff);
+    src: url(/css/font/TBCContractica-Bold.woff);
 }
 @font-face {
     font-family: Contractica-Regular;
-    src: url(assets/TBCContractica-Regular.woff);
+    src: url(/css/font/TBCContractica-Regular.woff);
 }
 .font-Contractica {
-    font-family: Contractica-Black;
+    font-family: Contractica-Regular !important;
 }
 .font-Montserrat {
     font-family: Montserrat;
@@ -37,14 +37,14 @@
 }
 
 .wellcome {
-    color: var(--MC-5, #FFF);
+    color: #FFF;
     font-feature-settings: 'liga' off, 'clig' off;
     /* H1 */
     font-family: Cirka;
-    font-size: 64px;
+    font-size: 64px ;
     font-style: normal;
     font-weight: 700;
-    line-height: 68px; /* 106.25% */
+    line-height: 68px ; /* 106.25% */
 }
 
 .header_menu {

@@ -10,4 +10,9 @@ class WhoWeAre extends Model
 {
     use HasFactory, Translatable;
     protected $translatable = ['name','content'];
+
+    public function children()
+    {
+        return $this->hasMany(WhoWeAre::class, 'parent_id', 'id');
+    }
 }

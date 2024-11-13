@@ -15,7 +15,7 @@ class HomeController extends Controller
 
         $headerSettings = HeaderSetting::where('slug','home')->first();
         View::share('headerSettings', $headerSettings->translate('locale', session()->get('locale')));
-        $whoWeAreModel = WhoWeAre::orderBy('id', 'desc')->first();
+        $whoWeAreModel = WhoWeAre::with('children')->where('parent_id','=',null)->first();
 
         return view('home',[
             'whoWeAre' => $whoWeAreModel->translate('locale', session()->get('locale'))
