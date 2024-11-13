@@ -22,7 +22,7 @@
                 </div>
                 <div class="inline-block flex items-center justify-center lg:justify-start">
                     <div class=" mt-7 pl-6 pr-6 pt-2 pb-2 text-xl border text-slate-800 border-slate-800 rounded-3xl text-center inline-block font-Montserrat">
-                        Learn more
+                        {{ __('Learn more') }}
                     </div>
                 </div>
 

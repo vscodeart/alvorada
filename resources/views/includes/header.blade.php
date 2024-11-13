@@ -1,4 +1,4 @@
-<div class="bg-cover flex flex-col bg-center bg-[url('/images/home.jpg')] h-[530px] header_menu ">
+<div class="bg-cover flex flex-col bg-center bg-[url('{{Voyager::image($headerSettings->image) }}')] h-[530px] header_menu ">
     <div class="h-22 bg-zinc-900 opacity-90 flex items-center">
         <header class="header_menu w-full">
 
@@ -159,7 +159,7 @@
         </header>
     </div>
     <div class="flex flex-col flex-grow justify-center text-center bg-cover bg-center items-center h-full ">
-        <p class="lg:text-5xl text-4xl font-bold text-white wellcome">{{ $headerText->name }}</p>
+        <p class="lg:text-5xl text-4xl font-bold text-white wellcome">{{ $headerSettings->heading }}</p>
     </div>
 
 

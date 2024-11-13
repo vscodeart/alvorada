@@ -2,7 +2,9 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\HeaderSetting;
 use App\Models\Home;
+use App\Models\WhoWeAre;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\View;
 
@@ -11,9 +13,12 @@ class HomeController extends Controller
     public function index()
     {
 
-        $headerText = Home::orderBy('id', 'desc')->first();
-        View::share('headerText', $headerText->translate('locale', session()->get('locale')));
+        $headerSettings = HeaderSetting::where('slug','home')->first();
+        View::share('headerSettings', $headerSettings->translate('locale', session()->get('locale')));
+        $whoWeAreModel = WhoWeAre::orderBy('id', 'desc')->first();
 
-        return view('home');
+        return view('home',[
+            'whoWeAre' => $whoWeAreModel->translate('locale', session()->get('locale'))
+        ]);
     }
 }
