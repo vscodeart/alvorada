@@ -13,11 +13,9 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/', [\App\Http\Controllers\HomeController::class, 'index'])->name('page.home');
 
-
+Route::get('/lang/change', [\App\Http\Controllers\MainController::class, 'change'])->name('changeLang');
 Route::group(['prefix' => 'cadmin'], function () {
     Voyager::routes();
 });

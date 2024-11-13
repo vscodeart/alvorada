@@ -1,0 +1,60 @@
+@font-face {
+    font-family: Cirka;
+    src: url(font/Cirka.woff);
+}
+@font-face {
+    font-family: Cirka-Light;
+    src: url(assets/Cirka-Light.woff);
+}
+@font-face {
+    font-family: Cirka-Bold;
+    src: url(assets/Cirka-Bold.woff);
+}
+@font-face {
+    font-family: 19;
+    src: url(assets/19-font.woff);
+}
+@font-face {
+    font-family: Contractica-Black;
+    src: url(assets/TBCContractica-Black.woff);
+}
+@font-face {
+    font-family: Contractica-Bold;
+    src: url(assets/TBCContractica-Bold.woff);
+}
+@font-face {
+    font-family: Contractica-Regular;
+    src: url(assets/TBCContractica-Regular.woff);
+}
+.font-Contractica {
+    font-family: Contractica-Black;
+}
+.font-Montserrat {
+    font-family: Montserrat;
+}
+.font-Cirka {
+    font-family: Cirka;
+}
+
+.wellcome {
+    color: var(--MC-5, #FFF);
+    font-feature-settings: 'liga' off, 'clig' off;
+    /* H1 */
+    font-family: Cirka;
+    font-size: 64px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 68px; /* 106.25% */
+}
+
+.header_menu {
+    color: #FFF;
+    font-feature-settings: 'liga' off, 'clig' off;
+    /* Body 14 */
+    font-family: Montserrat;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 22px; /* 157.143% */
+}
+

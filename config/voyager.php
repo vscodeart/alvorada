@@ -104,7 +104,7 @@ return [
         /*
          * Select default language
          */
-        'default' => 'en',
+        'default' => 'ge',
 
         /*
          * Select languages that are supported.
