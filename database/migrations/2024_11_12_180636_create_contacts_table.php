@@ -17,6 +17,7 @@ return new class extends Migration
             $table->string('mail')->nullable();
             $table->string('address')->nullable();
             $table->string('opening_hours')->nullable();
+            $table->string('image')->nullable();
             $table->timestamps();
         });
     }

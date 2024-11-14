@@ -25,6 +25,8 @@ Route::get('/who-we-are', [\App\Http\Controllers\WhoWeAreController::class, 'ind
 Route::get('/vouchers', [\App\Http\Controllers\VoucherController::class, 'index'])->name('page.voucher');
 Route::get('/blog', [\App\Http\Controllers\BlogController::class, 'index'])->name('page.blog.index');
 Route::get('/blog/{slug}', [\App\Http\Controllers\BlogController::class, 'full'])->name('page.blog.full');
+Route::get('/contact', [\App\Http\Controllers\ContactController::class, 'index'])->name('page.contact.index');
+Route::post('/contact-form', [\App\Http\Controllers\ContactController::class, 'store'])->name('page.contact.store');
 
 
 Route::get('/lang/change', [\App\Http\Controllers\MainController::class, 'change'])->name('changeLang');
