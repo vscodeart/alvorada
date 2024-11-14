@@ -52,9 +52,18 @@
     font-feature-settings: 'liga' off, 'clig' off;
     /* Body 14 */
     font-family: Montserrat;
-    font-size: 14px;
+    font-size: 14px ;
     font-style: normal;
     font-weight: 400;
     line-height: 22px; /* 157.143% */
 }
 
+.geo_header_menu {
+    color: #FFF;
+    font-feature-settings: 'liga' off, 'clig' off;
+    /* Body 14 */
+    font-family: Montserrat;
+    font-size: 12px;
+    font-style: normal;
+    line-height: 22px; /* 157.143% */
+}

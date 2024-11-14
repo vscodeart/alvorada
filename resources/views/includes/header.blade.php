@@ -1,6 +1,6 @@
-<div class="bg-cover flex flex-col bg-center bg-[url('{{Voyager::image($headerSettings->image) }}')] h-[530px] header_menu ">
+<div class="bg-cover flex flex-col bg-center bg-[url('{{Voyager::image($headerSettings->image) }}')] h-[530px]  @if($locale == 'ge') geo_header_menu @else header_menu @endif">
     <div class="h-22 bg-zinc-900 opacity-90 flex items-center">
-        <header class="header_menu w-full">
+        <header class="@if($locale == 'ge') geo_header_menu @else header_menu @endif w-full @if($locale == 'ge') font-Contractica @endif">
 
             <nav class="mx-auto flex max-w-7xl items-center justify-between p-6 lg:px-8 " aria-label="Global">
 
@@ -45,12 +45,12 @@
 
                 </div>
 
-                <div class="hidden lg:flex lg:gap-x-5">
-                    <a href="{{ route('page.home') }}"  class='font-bold' >Home</a>
-                    <a href="#" >Who We Are</a>
-                    <a href="service.php?p=service"   >Services</a>
-                    <a href="team.php?p=team"  >Our Team</a>
-                    <a href="gallery.php?p=gallery" >Gallery</a>
+                <div class="hidden lg:flex lg:gap-x-5  ">
+                    <a href="{{ route('page.home') }}"  class='font-bold' >{{ __('Home') }}</a>
+                    <a href="#" >{{ __('Who We Are') }}</a>
+                    <a href="service.php?p=service"   >{{ __('Services') }}</a>
+                    <a href="team.php?p=team"  >{{ __('Our Team') }}</a>
+                    <a href="gallery.php?p=gallery" >{{ __('Gallery') }}</a>
                 </div>
 
                 <div class="hidden lg:flex lg:gap-x-5 ">
@@ -89,10 +89,10 @@
 
                 <div class="hidden lg:flex lg:gap-x-5 lg:justify-end">
 
-                    <a href="brands.php?p=brands"   >Brands We Trust</a>
-                    <a href="vouchers.php?p=vouchers" >Vouchers & Promotions</a>
-                    <a href="blog.php?p=blog"   >Blog</a>
-                    <a href="contact.php?p=contact"  >Contact</a>
+                    <a href="brands.php?p=brands"   >{{ __('Brands We Trust') }}</a>
+                    <a href="vouchers.php?p=vouchers" >{{ __('Vouchers & Promotions') }}</a>
+                    <a href="blog.php?p=blog"   >{{ __('Blog') }}</a>
+                    <a href="contact.php?p=contact"  >{{ __('Contact') }}</a>
                 </div>
 
             </nav>
