@@ -48,7 +48,7 @@
 
                 <div class="hidden lg:flex lg:gap-x-5  ">
                     <a href="{{ route('page.home') }}"  {{ request()->routeIs('page.home') ? "class=font-bold":"" }}   >{{ __('Home') }}</a>
-                    <a href="#" >{{ __('Who We Are') }}</a>
+                    <a href="{{ route('page.whoweare') }}" {{ request()->routeIs('page.whoweare') ? "class=font-bold":'' }}>{{ __('Who We Are') }}</a>
                     <a href="{{ route('page.services') }}" {{ request()->routeIs('page.services*') ? "class=font-bold":'' }}  >{{ __('Services') }}</a>
                     <a href="{{ route('page.our.team') }}" {{ request()->routeIs('page.our.team') ? "class=font-bold":'' }} >{{ __('Our Team') }}</a>
                     <a href="{{ route('page.gallery') }}" {{ request()->routeIs('page.gallery') ? "class=font-bold":'' }} >{{ __('Gallery') }}</a>
