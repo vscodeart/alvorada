@@ -23,6 +23,8 @@ Route::get('/gallery', [\App\Http\Controllers\GalleryController::class, 'index']
 Route::get('/brands', [\App\Http\Controllers\BrandController::class, 'index'])->name('page.brands');
 Route::get('/who-we-are', [\App\Http\Controllers\WhoWeAreController::class, 'index'])->name('page.whoweare');
 Route::get('/vouchers', [\App\Http\Controllers\VoucherController::class, 'index'])->name('page.voucher');
+Route::get('/blog', [\App\Http\Controllers\BlogController::class, 'index'])->name('page.blog.index');
+Route::get('/blog/{slug}', [\App\Http\Controllers\BlogController::class, 'full'])->name('page.blog.full');
 
 
 Route::get('/lang/change', [\App\Http\Controllers\MainController::class, 'change'])->name('changeLang');
