@@ -188,14 +188,9 @@ return [
 
     'attributes' => [
         'name' => 'სახელი',
-        'email' => 'ელ.ფოსტა',
-        'phone' => 'ტელეფონი',
-        'subject' => 'საგანი',
+        'phone_number' => 'ტელეფონი',
         'message' => 'შეტყობინება',
-        'fname' => 'სახელი',
-        'lname' => 'გვარი',
-        'personal_number' => 'პირადი ნომერი',
-        'comment' => 'კომენატარი',
+        'service' => 'სერვისი',
     ],
 
 ];
