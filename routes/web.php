@@ -20,6 +20,7 @@ Route::get('/services/{slug}/{subslug}', [\App\Http\Controllers\ServiceControlle
 
 Route::get('/our-team', [\App\Http\Controllers\OurTeamController::class, 'index'])->name('page.our.team');
 Route::get('/gallery', [\App\Http\Controllers\GalleryController::class, 'index'])->name('page.gallery');
+Route::get('/brands', [\App\Http\Controllers\BrandController::class, 'index'])->name('page.brands');
 
 
 Route::get('/lang/change', [\App\Http\Controllers\MainController::class, 'change'])->name('changeLang');
