@@ -50,7 +50,7 @@
                     <a href="{{ route('page.home') }}"  {{ request()->routeIs('page.home') ? "class=font-bold":"" }}   >{{ __('Home') }}</a>
                     <a href="#" >{{ __('Who We Are') }}</a>
                     <a href="{{ route('page.services') }}" {{ request()->routeIs('page.services*') ? "class=font-bold":'' }}  >{{ __('Services') }}</a>
-                    <a href="team.php?p=team"  >{{ __('Our Team') }}</a>
+                    <a href="{{ route('page.our.team') }}" {{ request()->routeIs('page.our.team') ? "class=font-bold":'' }} >{{ __('Our Team') }}</a>
                     <a href="gallery.php?p=gallery" >{{ __('Gallery') }}</a>
                 </div>
 
