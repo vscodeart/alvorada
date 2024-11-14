@@ -13,7 +13,8 @@
                                 {!! \Illuminate\Support\Str::limit(strip_tags($blog->getTranslatedAttribute('content')), 150, $end='...') !!}
                                 <div class="grid mt-4 grid-cols-2 grid-rows-1">
                                     <a href="{{ route('page.blog.full', $blog->slug) }}">
-                                        <div class="border py-1 border-black w-3/4 inline-block text-large rounded-2xl px-1 text-center font-semibold">{{ __('Learn More') }}</div>
+                                        <div class="border py-1 border-black w-3/4 inline-block text-large rounded-2xl px-1 text-center font-semibold">
+                                            {{ __("Learn More") }} </div>
                                     </a>
                                     <div class="flex justify-end text-[#AA714B] mt-1">
                                     @php
