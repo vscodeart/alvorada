@@ -1,4 +1,5 @@
-<div class="bg-cover flex flex-col bg-center bg-[url('{{Voyager::image($headerSettings->image) }}')] h-[530px]  @if($locale == 'ge') geo_header_menu @else header_menu @endif">
+<div class="bg-cover flex flex-col bg-center bg-[url('@if(isset($headerSettings) && $headerSettings != null){{ Voyager::image($headerSettings->header_image) }}@endif')]
+{{ request()->routeIs('page.home') ? 'h-[530px]' : 'h-[339px]' }}   @if($locale == 'ge') geo_header_menu @else header_menu @endif">
     <div class="h-22 bg-zinc-900 opacity-90 flex items-center">
         <header class="@if($locale == 'ge') geo_header_menu @else header_menu @endif w-full @if($locale == 'ge') font-Contractica @endif">
 
@@ -46,9 +47,9 @@
                 </div>
 
                 <div class="hidden lg:flex lg:gap-x-5  ">
-                    <a href="{{ route('page.home') }}"  class='font-bold' >{{ __('Home') }}</a>
+                    <a href="{{ route('page.home') }}"  {{ request()->routeIs('page.home') ? "class=font-bold":"" }}   >{{ __('Home') }}</a>
                     <a href="#" >{{ __('Who We Are') }}</a>
-                    <a href="service.php?p=service"   >{{ __('Services') }}</a>
+                    <a href="{{ route('page.services') }}" {{ request()->routeIs('page.services*') ? "class=font-bold":'' }}  >{{ __('Services') }}</a>
                     <a href="team.php?p=team"  >{{ __('Our Team') }}</a>
                     <a href="gallery.php?p=gallery" >{{ __('Gallery') }}</a>
                 </div>
@@ -158,9 +159,12 @@
             </div>
         </header>
     </div>
-    <div class="flex flex-col flex-grow justify-center text-center bg-cover bg-center items-center h-full ">
-        <p class="lg:text-5xl text-4xl font-bold text-white wellcome">{{ $headerSettings->heading }}</p>
-    </div>
+    @if(isset($headerSettings) && $headerSettings != null && $headerSettings->heading && trim($headerSettings->heading) !='')
+        <div class="flex flex-col flex-grow justify-center text-center bg-cover bg-center items-center h-full ">
+            <p class="font-bold text-white  {{ request()->routeIs('page.home') ? "lg:text-5xl text-4xl   wellcome":"text-6xl font-Cirka   mb-7 lg:mr-10" }} ">{{ $headerSettings->heading }}</p>
+        </div>
+    @endif
+
 
 
 

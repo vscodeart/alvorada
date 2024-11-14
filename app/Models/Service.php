@@ -9,5 +9,14 @@ use TCG\Voyager\Traits\Translatable;
 class Service extends Model
 {
     use HasFactory, Translatable;
-    protected $translatable = ['name','content','image_name',''];
+    protected $translatable = ['name','content','image_name','image_time'];
+
+    public function children()
+    {
+        return $this->hasMany(Service::class, 'parent_id', 'id');
+    }
+
+    public function first_child() {
+        return $this->children()->take(1);
+    }
 }

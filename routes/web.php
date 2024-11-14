@@ -14,6 +14,9 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', [\App\Http\Controllers\HomeController::class, 'index'])->name('page.home');
+Route::get('/services', [\App\Http\Controllers\ServiceController::class, 'index'])->name('page.services');
+Route::get('/services/{slug}', [\App\Http\Controllers\ServiceController::class, 'children'])->name('page.services.children');
+Route::get('/services/{slug}/{subslug}', [\App\Http\Controllers\ServiceController::class, 'getSubChilds'])->name('page.services.children.sub');
 
 Route::get('/lang/change', [\App\Http\Controllers\MainController::class, 'change'])->name('changeLang');
 Route::group(['prefix' => 'cadmin'], function () {

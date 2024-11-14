@@ -67,3 +67,7 @@
     font-style: normal;
     line-height: 22px; /* 157.143% */
 }
+.active-child-menu{
+    color: white;
+    background-color: #3C515A !important;
+}

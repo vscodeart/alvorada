@@ -16,6 +16,7 @@ return new class extends Migration
             $table->unsignedBigInteger('parent_id')->nullable();
             $table->string('name');
             $table->string('slug');
+            $table->string('header_image')->nullable();
             $table->string('image')->nullable();
             $table->string('image_name')->nullable();
             $table->string('image_time')->nullable();
