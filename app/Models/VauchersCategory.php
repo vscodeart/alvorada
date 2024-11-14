@@ -9,5 +9,11 @@ use TCG\Voyager\Traits\Translatable;
 class VauchersCategory extends Model
 {
     use HasFactory, Translatable;
+
     protected $translatable = ['name'];
+
+    public function vouchers()
+    {
+        return $this->hasMany(VauchersAndGift::class, 'vauchers_category_id', 'id');
+    }
 }

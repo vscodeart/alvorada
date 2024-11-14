@@ -14,7 +14,7 @@ class BrandController extends Controller
    {
        $headerSettings = HeaderSetting::where('slug', 'brand-we-trust')->first();
        View::share('headerSettings', $headerSettings->translate('locale', session()->get('locale')));
-       $brands = Brand::query()->orderBy('created_at')->get();
+       $brands = Brand::query()->orderBy('created_at','desc')->get();
        return \view('brands', [
            'brands' => $brands
        ]);

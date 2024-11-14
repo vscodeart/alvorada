@@ -91,7 +91,7 @@
                 <div class="hidden lg:flex lg:gap-x-5 lg:justify-end">
 
                     <a href="{{ route('page.brands') }}"  {{ request()->routeIs('page.brands') ? "class=font-bold":'' }} >{{ __('Brands We Trust') }}</a>
-                    <a href="vouchers.php?p=vouchers" >{{ __('Vouchers & Promotions') }}</a>
+                    <a href="{{ route('page.voucher') }}" {{ request()->routeIs('page.voucher') ? "class=font-bold":'' }}>{{ __('Vouchers & Promotions') }}</a>
                     <a href="blog.php?p=blog"   >{{ __('Blog') }}</a>
                     <a href="contact.php?p=contact"  >{{ __('Contact') }}</a>
                 </div>

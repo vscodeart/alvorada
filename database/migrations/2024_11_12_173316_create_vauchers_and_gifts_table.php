@@ -19,6 +19,8 @@ return new class extends Migration
             $table->string('image')->nullable();
             $table->foreign('vauchers_category_id')->references('id')->on('vauchers_categories');
             $table->timestamps();
+            $table->enum('text_position', ['Left', 'Right'])->default('Left');
+
         });
     }
 
