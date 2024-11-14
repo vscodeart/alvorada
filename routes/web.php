@@ -19,6 +19,7 @@ Route::get('/services/{slug}', [\App\Http\Controllers\ServiceController::class, 
 Route::get('/services/{slug}/{subslug}', [\App\Http\Controllers\ServiceController::class, 'getSubChilds'])->name('page.services.children.sub');
 
 Route::get('/our-team', [\App\Http\Controllers\OurTeamController::class, 'index'])->name('page.our.team');
+Route::get('/gallery', [\App\Http\Controllers\GalleryController::class, 'index'])->name('page.gallery');
 
 
 Route::get('/lang/change', [\App\Http\Controllers\MainController::class, 'change'])->name('changeLang');
