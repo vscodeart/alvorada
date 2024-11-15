@@ -6,11 +6,15 @@
 
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
-    <title>{{ config('app.name', 'Laravel') }}</title>
+    <title> @if($meta_seo->meta_title == '') {{ config('app.name', 'Laravel') }} @else {{ config('app.name', 'Laravel') }}-{{ $meta_seo->meta_title }} @endif</title>
 
-    <meta name="keywords" content=""/>
-    <meta name="description" content="">
+    <meta name="description" content="{{ $meta_seo->meta_description }}">
+    <meta name="keywords" content="{{ $meta_seo->meta_keywords }}"/>
     <meta name="author" content="">
+
+    <meta property="og:title" content="{{ $meta_seo->meta_title }}">
+    <meta property="og:description" content="{{ $meta_seo->meta_description }}">
+    <meta property="og:image" content="{{Voyager::image($meta_seo->meta_image) }}">
 
     <script src="https://cdn.tailwindcss.com"></script>
 
@@ -19,7 +23,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.css"/>
     <link rel="stylesheet" href="/css/style.css">
-    <title>alvorada</title>
+
     <!-- WebFont.js -->
     <script>
         const LANG = '{{ $locale ?? 'ka' }}';

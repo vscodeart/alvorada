@@ -7,6 +7,7 @@ use App\Mail\SendMail;
 use App\Models\Contact;
 use App\Models\ContactForm;
 use App\Models\HeaderSetting;
+use App\Models\SeoSetting;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Mail;
 use Illuminate\Support\Facades\View;
@@ -19,7 +20,8 @@ class ContactController extends Controller
         $headerSettings = HeaderSetting::where('slug','contact')->first();
         View::share('headerSettings', $headerSettings->translate('locale', session()->get('locale')));
         $contactModel = Contact::orderBy('created_at', 'desc')->first();
-
+        $seoSettings = SeoSetting::where('slug','contact')->first();
+        View::share('meta_seo', $seoSettings ?? '');
         return view('contact',[
             'contact' => $contactModel->translate('locale', session()->get('locale'))
         ]);
