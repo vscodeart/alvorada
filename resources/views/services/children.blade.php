@@ -49,7 +49,7 @@
                                     </div>
                                     <div class=" flex justify-end items-end flex-grow  ">
                                         <div class="border text-2xl rounded-xl text-white border-gray-200 mr-5 py-3 px-5 font-Cirka"
-                                             style="border-color: {{ $subChild->border_color }};">
+                                             style="border-color: #8FB0AE;">
                                             {{ $subChild->price }} {{ __('GEL') }}
                                         </div>
                                     </div>
@@ -103,7 +103,7 @@
                                     </div>
                                     <div class=" flex justify-end items-end flex-grow  ">
                                         <div class="border text-2xl rounded-xl text-white border-gray-200 mr-5 py-3 px-5 font-Cirka"
-                                             style="border-color: {{ $subChild->border_color }};">
+                                             style="border-color: #8FB0AE;">
                                             {{ $subChild->price }} {{ __('GEL') }}
                                         </div>
                                     </div>
