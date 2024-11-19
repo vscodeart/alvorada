@@ -113,7 +113,7 @@
                 <div class="fixed inset-0 z-10"></div>
                 <div class="fixed inset-y-0 right-0 z-10 w-full overflow-y-auto bg-white  sm:max-w-sm sm:ring-1 sm:ring-gray-900/10">
                     <div class="flex items-center justify-between bg-zinc-900 px-6 py-5 ">
-                        <a href="#" class="-m-1.5 p-1.5">
+                        <a href="{{ route('page.home') }}" class="-m-1.5 p-1.5">
                             <span class="sr-only">Alvorada</span>
 
                             <div class="flex gap-3">
@@ -157,15 +157,15 @@
                         <div class="-my-6 divide-y divide-gray-500/10 ">
                             <div class="space-y-2 py-6 text-center   ">
 
-                                <a href="#" class="-mx-3 block rounded-lg px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50">Home</a>
-                                <a href="#" class="-mx-3 block rounded-lg px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50">Who We are</a>
-                                <a href="#" class="-mx-3 block rounded-lg px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50">Services</a>
-                                <a href="#" class="-mx-3 block rounded-lg px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50">Services</a>
-                                <a href="#" class="-mx-3 block rounded-lg px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50">Our Team</a>
-                                <a href="#" class="-mx-3 block rounded-lg px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50">Gallery</a>
-                                <a href="#" class="-mx-3 block rounded-lg px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50">Brands We Trust</a>
-                                <a href="#" class="-mx-3 block rounded-lg px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50">Vouchers & Promotions</a>
-                                <a href="#" class="-mx-3 block rounded-lg px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50">Contact</a>
+                                <a href="{{ route('page.home') }}" class="-mx-3 block rounded-lg px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50">{{ __('Home') }}</a>
+                                <a href="{{ route('page.whoweare') }}" class="-mx-3 block rounded-lg px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50">{{ __('Who We Are') }}</a>
+                                <a href="{{ route('page.services') }}" class="-mx-3 block rounded-lg px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50">{{ __('Services') }}</a>
+                                <a href="{{ route('page.our.team') }}" class="-mx-3 block rounded-lg px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50">{{ __('Our Team') }}</a>
+                                <a href="{{ route('page.gallery') }}" class="-mx-3 block rounded-lg px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50">{{ __('Gallery') }}</a>
+                                <a href="{{ route('page.brands') }}" class="-mx-3 block rounded-lg px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50">{{ __('Brands We Trust') }}</a>
+                                <a href="{{ route('page.voucher') }}" class="-mx-3 block rounded-lg px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50">{{ __('Vouchers & Promotions') }}</a>
+                                <a href="{{ route('page.blog.index') }}" class="-mx-3 block rounded-lg px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50">{{ __('Blog') }}</a>
+                                <a href="{{ route('page.contact.index') }}" class="-mx-3 block rounded-lg px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50">{{ __('Contact') }}</a>
                             </div>
                         </div>
                     </div>
