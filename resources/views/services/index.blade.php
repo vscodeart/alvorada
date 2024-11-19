@@ -7,11 +7,11 @@
 
             @foreach($services as $service)
                 <div class="flex justify-center items-center">
-                    <div class="h-96 lg:w-72 w-full rounded-lg overflow-hidden shadow-lg border border-gray-200 bg-cover bg-center flex flex-col @if($loop->odd) justify-end @endif" style="background-image: url('{{Voyager::image($service->image) }}');">
-                        <div class="bg-[{{ $service->color }}] bg-opacity-75 w-full text-center p-6 rounded-lg border border-[{{$service->border_color}}]">
+                    <div class="h-96 lg:w-72 w-full rounded-lg overflow-hidden shadow-lg border bg-cover bg-center flex flex-col @if($loop->odd) justify-end @endif" style="background-image: url('{{Voyager::image($service->image) }}'); border-color:'{{ $service->border_color }}';">
+                        <div class="bg-[{{ $service->color }}] bg-opacity-75 w-full text-center p-6 rounded-lg border border-[#7A9F9B]">
                             <p class="text-white text-2xl font-semibold mb-4 font-Cirka">{{ $service->getTranslatedAttribute('name') }}</p>
                             <a href="{{ route('page.services.children',$service->slug) }}">
-                                <button class="bg-[{{$service->border_color}}] text-white font-semibold font-Montserrat py-2 px-6 rounded-lg shadow hover:brightness-105 border">
+                                <button class="bg-[#8FB0AE] text-white font-semibold font-Montserrat py-2 px-6 rounded-lg shadow hover:brightness-105 border">
                                     {{ __('Learn more') }}
                                 </button>
                             </a>
