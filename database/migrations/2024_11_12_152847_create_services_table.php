@@ -23,6 +23,7 @@ return new class extends Migration
             $table->longText('content')->nullable();
             $table->string('price')->nullable();
             $table->string('color')->nullable();
+            $table->string('border_color')->nullable();
 
             $table->string('meta_title')->nullable();
             $table->string('meta_description')->nullable();
