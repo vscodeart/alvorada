@@ -11,7 +11,7 @@
                         <div class="bg-[{{ $service->color }}] bg-opacity-75 w-full text-center p-6 rounded-lg border border-[{{$service->border_color}}]">
                             <p class="text-white text-2xl font-semibold mb-4 font-Cirka">{{ $service->getTranslatedAttribute('name') }}</p>
                             <a href="{{ route('page.services.children',$service->slug) }}">
-                                <button class="bg-[#8FB0AE] text-white font-semibold font-Montserrat py-2 px-6 rounded-lg shadow hover:brightness-105 border">
+                                <button class="bg-[{{$service->border_color}}] text-white font-semibold font-Montserrat py-2 px-6 rounded-lg shadow hover:brightness-105 border">
                                     {{ __('Learn more') }}
                                 </button>
                             </a>
