@@ -12,19 +12,19 @@
                         <div class="flex justify-center rounded-lg items-center bg-[#AA714B] bg-opacity-5 font-Montserrat">{{ $contact->phone }}</div>
                     </div>
                 </div>
-                <div class="h-[111px]  border border-stone-800 rounded-lg lg:mx-0 mx-10">
+                <div class="h-[111px]  border border-[#705140] rounded-lg lg:mx-0 mx-10">
                     <div class="grid grid-cols-1 h-full grid-rows-2 gap-2">
                         <div class="flex  justify-center items-center font-bold text-2xl font-Contractica ">{{ __('Email') }}</div>
                         <div class="flex justify-center rounded-lg items-center bg-[#AA714B] bg-opacity-5 font-Montserrat">{{ $contact->mail }}</div>
                     </div>
                 </div>
-                <div class="h-[111px]  border border-stone-800 rounded-lg lg:mx-0 mx-10">
+                <div class="h-[111px]  border border-[#705140] rounded-lg lg:mx-0 mx-10">
                     <div class="grid grid-cols-1 h-full grid-rows-2 gap-2">
                         <div class="flex  justify-center items-center font-semibold text-2xl font-Contractica">{{ __('Address') }}</div>
                         <div class="flex justify-center rounded-lg items-center bg-[#AA714B] bg-opacity-5 font-Montserrat">{{ $contact->address }}</div>
                     </div>
                 </div>
-                <div class="h-[111px]  border border-stone-800 rounded-lg lg:mx-0 mx-10">
+                <div class="h-[111px]  border border-[#705140] rounded-lg lg:mx-0 mx-10">
                     <div class="grid grid-cols-1 h-full grid-rows-2 gap-2">
                         <div class="flex  justify-center items-center font-bold text-2xl font-Contractica">{{ __('Opening Hours') }}</div>
                         <div class="flex justify-center rounded-lg items-center bg-[#AA714B] bg-opacity-5 font-Montserrat">{{ $contact->opening_hours }}</div>
@@ -73,38 +73,38 @@
                                     <span class="font-medium"> {{ $message }}</span>
                                 </div>
                             @endif
-
+                            
                             @if ($message = session('error'))
                                 <div class="p-4 mb-4 text-sm text-red-800 rounded-lg bg-red-50 dark:bg-gray-800 dark:text-red-400"
                                      role="alert">
-                                    <span class="font-medium">  {{ $message }}</span>
+                                    <span class="font-medium ">  {{ $message }}</span>
                                 </div>
                             @endif
 
                             <div class="mt-5 pr-2 pl-2">
                                 <input class="w-full bg-transparent bg-white h-12 placeholder:text-black font-normal text-slate-700 text-base  rounded-md px-3 py-2 transition duration-300 ease focus:outline-none focus:border-slate-400 hover:border-slate-300 shadow-sm focus:shadow" name="name" placeholder="{{ __('Name') }}" />
                                 @error('name')
-                                <div class="invalid">{{ $message }}</div>
+                                <div class="invalid text-sm text-red-800 mt-2 ml-2 flex justify-start">{{ $message }}</div>
                                 @enderror
                             </div>
                             <div class="grid lg:grid-cols-2 gap-3 lg:gap-5 mt-3 pr-2 pl-2">
                                 <div>
                                     <input class="w-full bg-transparent bg-white h-12 placeholder:text-black font-normal text-slate-700 text-base  rounded-md px-3 py-2 transition duration-300 ease focus:outline-none focus:border-slate-400 hover:border-slate-300 shadow-sm focus:shadow" name="phone_number" placeholder="{{ __('Phone Number') }}" />
                                     @error('phone_number')
-                                    <div class="invalid">{{ $message }}</div>
+                                    <div class="invalid text-sm text-red-800 mt-2 ml-2 flex justify-start">{{ $message }}</div>
                                     @enderror
                                 </div>
                                 <div>
                                     <input class="w-full bg-transparent bg-white h-12 placeholder:text-black font-normal text-slate-700 text-base  rounded-md px-3  transition duration-300 ease focus:outline-none focus:border-slate-400 hover:border-slate-300 shadow-sm focus:shadow" name="service" placeholder="{{ __('Service') }}" />
                                     @error('service')
-                                    <div class="invalid">{{ $message }}</div>
+                                    <div class="invalid text-sm text-red-800 mt-2 ml-2 flex justify-start">{{ $message }}</div>
                                     @enderror
                                 </div>
                             </div>
                             <div class=" lg:mt-5 mt-4 pr-2 pl-2">
                                 <input class="w-full bg-transparent  bg-white  placeholder:text-black font-normal placeholder: text-up  text-slate-700 text-base  rounded-md px-3 pb-24 pt-4   transition duration-300 ease focus:outline-none focus:border-slate-400 hover:border-slate-300 shadow-sm focus:shadow" name="message" placeholder="{{ __('Message') }}" />
                                 @error('message')
-                                <div class="invalid">{{ $message }}</div>
+                                <div class="invalid text-sm text-red-800 mt-2 ml-2 flex justify-start">{{ $message }}</div>
                                 @enderror
 
                             </div>
