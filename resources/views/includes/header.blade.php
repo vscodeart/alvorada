@@ -38,7 +38,7 @@
                     </a>
                     <div>
 
-                        <button type="button" class="">
+                        <button type="button" class="close-open-menu">
                             <svg width="39" height="13" viewBox="0 0 39 13" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <rect width="39" height="1.625" fill="white"/>
                                 <rect x="13" y="11.375" width="26" height="1.625" fill="white"/>
@@ -108,7 +108,7 @@
 
 
             <!-- Mobile menu, show/hide based on menu open state. -->
-            <div class="lg:hidden hidden " role="dialog" aria-modal="true">
+            <div class="mobile-menu-wrapper lg:hidden hidden " role="dialog" aria-modal="true">
                 <!-- Background backdrop, show/hide based on slide-over state. -->
                 <div class="fixed inset-0 z-10"></div>
                 <div class="fixed inset-y-0 right-0 z-10 w-full overflow-y-auto bg-white  sm:max-w-sm sm:ring-1 sm:ring-gray-900/10">
@@ -146,7 +146,7 @@
                             </div>
 
                         </a>
-                        <button type="button" class="-mt-1.5">
+                        <button type="button" class="-mt-1.5 close-open-menu">
                             <span class="sr-only">Close menu</span>
                             <svg class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true" data-slot="icon">
                                 <path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12" />

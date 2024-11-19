@@ -60,11 +60,23 @@
 
 @vite(['resources/js/app.js'])
 @yield('js')
+<script src="/js/jquery-3.7.1.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.umd.js"></script>
 <script>
     Fancybox.bind('[data-fancybox="gallery"]', {
         //
     });
+
+    var $menuWrp = '.mobile-menu-wrapper';
+    var $closeOpenMenu = '.close-open-menu';
+    $(document).on("click",$closeOpenMenu, function (e){
+        e.preventDefault();
+        if($($menuWrp).hasClass('hidden')){
+            $($menuWrp).removeClass('hidden');
+        }else{
+            $($menuWrp).addClass('hidden');
+        }
+    })
 </script>
 </body>
 </html>
