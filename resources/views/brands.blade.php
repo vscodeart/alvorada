@@ -3,7 +3,7 @@
 
 
 
-    <div class="bg-stone-200 px-10">
+    <div class="bg-stone-200 px-10" style="position:relative; z-index: -1;">
         <div class="flex justify-center items-center pb-10">
             <div class="grid  justify-center  items-center text-center lg:grid-cols-4 max-w-7xl pt-10 grid-rows-2 gap-7">
 
