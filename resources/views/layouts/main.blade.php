@@ -49,7 +49,9 @@
 
 
 <!-- Start of Main -->
+<div style="position:relative; z-index:-1;">
     @yield('content')
+</div>
     <!-- End of Main -->
 
     <!-- Start of Footer -->
