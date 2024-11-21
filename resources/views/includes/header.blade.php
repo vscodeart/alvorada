@@ -173,9 +173,9 @@
             </div>
         </header>
     </div>
-    @if(isset($headerSettings) && $headerSettings != null && $headerSettings->heading && trim($headerSettings->heading) !='')
+    @if(isset($headerSettings) && $headerSettings != null && ($headerSettings->heading && trim($headerSettings->heading) !='') || $headerSettings->name && trim($headerSettings->name)  != '' )
         <div class="flex flex-col flex-grow justify-center text-center bg-cover bg-center items-center h-full ">
-            <p class="font-bold text-white  {{ request()->routeIs('page.home') ? "lg:text-5xl text-4xl   wellcome":"text-6xl font-Cirka mb-7 " }} @if(request()->routeIs('page.home') && $locale=='ge') lg:ml-0 @elseif($locale == 'ge') lg:ml-12 @else lg:mr-10 @endif ">{{ $headerSettings->heading }}</p>
+            <p class="font-bold text-white  {{ request()->routeIs('page.home') ? "lg:text-5xl text-4xl   wellcome":"text-6xl font-Cirka mb-7 " }} @if(request()->routeIs('page.home') && $locale=='ge') lg:ml-0 @elseif($locale == 'ge') lg:ml-12 @else lg:mr-10 @endif ">{{ $headerSettings->heading !='' ? $headerSettings->heading : $headerSettings->name  }}</p>
         </div>
     @endif
 
