@@ -89,11 +89,11 @@
                                         @elseif ($row->type == 'relationship')
 
                                             {{--custom relationship category tree--}}
-                                             @if($row->field == 'service_hasmany_service_relationship')
+                                            @if($row->field == 'service_hasmany_service_relationship')
                                                 @include('vendor.voyager.services.custom-categories',['selectedId' => $dataTypeContent->parent_id])
-                                             @else
+                                            @else
                                                 @include('voyager::formfields.relationship', ['options' => $row->details])
-                                             @endif
+                                            @endif
                                         @else
                                             {!! app('voyager')->formField($row, $dataType, $dataTypeContent) !!}
                                         @endif
@@ -126,8 +126,6 @@
 
 
                     <!-- ### IMAGE ### -->
-
-
 
 
                     <!-- ### SEO CONTENT ### -->
@@ -169,18 +167,16 @@
                             </div>
 
 
+                            @if($edit)
+                                <div class="form-group">
+                                    <label for="slug">{{ __('voyager::post.slug') }}</label>
 
-
-
-                            <div class="form-group">
-                                <label for="slug">{{ __('voyager::post.slug') }}</label>
-
-                                <input type="text" class="form-control" id="slug" name="slug"
-                                       placeholder="slug"
-                                       {!! isFieldSlugAutoGenerator($dataType, $dataTypeContent, "slug") !!}
-                                       value="{{ $dataTypeContent->slug ?? '' }}">
-                            </div>
-
+                                    <input type="text" class="form-control" id="slug" name="slug"
+                                           placeholder="slug"
+                                           {!! isFieldSlugAutoGenerator($dataType, $dataTypeContent, "slug") !!}
+                                           value="{{ $dataTypeContent->slug ?? '' }}">
+                                </div>
+                            @endif
 
                         </div>
                     </div>

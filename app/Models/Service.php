@@ -2,14 +2,22 @@
 
 namespace App\Models;
 
+use Cviebrock\EloquentSluggable\Sluggable;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use TCG\Voyager\Traits\Translatable;
 
 class Service extends Model
 {
-    use HasFactory, Translatable;
-
+    use HasFactory, Translatable, Sluggable;
+    public function sluggable(): array
+    {
+        return [
+            'slug' => [
+                'source' => 'name'
+            ]
+        ];
+    }
     protected $translatable = ['name', 'content', 'image_name', 'image_time'];
 
     public function children()
